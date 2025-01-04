@@ -5,7 +5,28 @@
     <article>
       <h4>Button 1</h4>
 
-      <button>Button 1</button>
+      <button>Button01</button>
+
+      <app-button01
+        (buttonClick)="doSomething($event)"
+        [theme]="Button01Theme.prime"
+        [disabled]="false"
+        [label]="'Custom Button'"
+      ></app-button01>
+
+      <app-button01
+        (buttonClick)="doSomething($event)"
+        [theme]="Button01Theme.secondary"
+        [disabled]="false"
+        [label]="'Custom Button'"
+      ></app-button01>
+
+      <app-button01
+        (buttonClick)="doSomething($event)"
+        [theme]="Button01Theme.secondary"
+        [disabled]="true"
+        [label]="'Custom Button'"
+      ></app-button01>
     </article>
   </section>
 

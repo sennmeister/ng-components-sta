@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Button01Component } from './shared/components/button01/button01.component';
+import { Button01Theme } from './core/enum';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [Button01Component],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.sass'
+  styleUrl: './app.component.sass',
 })
 export class AppComponent {
-  title = 'ng-components-sta';
+  public Button01Theme = Button01Theme;
+  public doSomething($event: MouseEvent): void {
+    console.log($event);
+  }
 }
