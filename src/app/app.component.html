@@ -3,30 +3,54 @@
     <h2>Buttons</h2>
 
     <article>
-      <h4>Button 1</h4>
+      <h4>Button01</h4>
+      <p>Reuseabel Button aus YT-Video von Johannes Schiel</p>
 
-      <button>Button01</button>
+      <div class="component-container">
+        <app-button01
+          (buttonClick)="doSomething($event)"
+          [theme]="Button01Theme.prime"
+          [disabled]="false"
+          [label]="'Custom Button'"
+        ></app-button01>
 
-      <app-button01
-        (buttonClick)="doSomething($event)"
-        [theme]="Button01Theme.prime"
-        [disabled]="false"
-        [label]="'Custom Button'"
-      ></app-button01>
+        <app-button01
+          (buttonClick)="doSomething($event)"
+          [theme]="Button01Theme.secondary"
+          [disabled]="false"
+          [label]="'Custom Button'"
+        ></app-button01>
 
-      <app-button01
-        (buttonClick)="doSomething($event)"
-        [theme]="Button01Theme.secondary"
-        [disabled]="false"
-        [label]="'Custom Button'"
-      ></app-button01>
+        <app-button01
+          (buttonClick)="doSomething($event)"
+          [theme]="Button01Theme.secondary"
+          [disabled]="true"
+          [label]="'Custom Button'"
+        ></app-button01>
+      </div>
+    </article>
 
-      <app-button01
-        (buttonClick)="doSomething($event)"
-        [theme]="Button01Theme.secondary"
-        [disabled]="true"
-        [label]="'Custom Button'"
-      ></app-button01>
+    <article>
+      <h4>Button02</h4>
+      <p>Beschreibungen stehen hier</p>
+
+      <div class="component-container">
+        <button
+          appButton02
+          (buttonClick)="doSomething($event)"
+          theme="Button01Theme.prime"
+          [label]="'The Custom Button'"
+        ></button>
+
+        <!-- <a
+          href="#"
+          appButton02
+          (buttonClick)="doSomething($event)"
+          [theme]="Button01Theme.prime"
+          disabled="false"
+          [label]="'Second Custom Button'"
+        ></a> -->
+      </div>
     </article>
   </section>
 
