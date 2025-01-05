@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Button01Theme } from '../../../core/enum';
 
 @Component({
-  selector: 'app-button01',
+  selector: '[appButton02]',
   standalone: true,
   imports: [],
   templateUrl: './button02.component.html',
@@ -10,8 +10,8 @@ import { Button01Theme } from '../../../core/enum';
 })
 export class Button02Component {
   @Input() label: string = '';
-  @Input() disabled: boolean = false;
-  @Input() theme: Button01Theme = Button01Theme.prime;
+  public disabled?: boolean = false;
+  public theme?: Button01Theme = Button01Theme.prime;
 
   @Output() buttonClick: EventEmitter<MouseEvent> =
     new EventEmitter<MouseEvent>();
